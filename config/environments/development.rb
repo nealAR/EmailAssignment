@@ -15,7 +15,11 @@ PostmarkMittExample::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  # Change mail delivery to either :smtp, :sendemail, :file, :test
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = { :api_key => "8c22aba7-0063-4d3d-9f0b-02213a58e6d8" }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

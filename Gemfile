@@ -4,6 +4,8 @@ gem 'rails', '3.0.6'
 
 gem 'postmark-mitt', '0.0.8'
 
+gem 'postmark-rails'
+
 group :development, :test do
   gem 'sqlite3'
 end
